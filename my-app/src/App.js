@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import PropTypes from 'prop-types';
+import ShopItem from './models/ShopItem';
 
 function ShopItemFunc({item}) {
   return (
@@ -28,6 +30,10 @@ function ShopItemFunc({item}) {
     </div>
   </div>
   )
+}
+
+ShopItemFunc.propTypes = {
+  item: PropTypes.instanceOf(ShopItem).isRequired
 }
 
 function App() {
